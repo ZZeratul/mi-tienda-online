@@ -1,0 +1,77 @@
+/* Aplica la imagen como fondo */
+body {
+    background-image: url('/images/F1.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la página */
+    background-position: center center; /* Centra la imagen */
+    color: white; /* Para que el texto sea visible */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los productos */
+.product {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y transparente para resaltar los productos */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.product p {
+    font-size: 18px;
+}
+
+#productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('/images/F1.jpg'); /* Agregar fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+#productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 220px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+body {
+    background-image: url('/images/F1.jpg'); /* Agregar fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la página */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    color: white; /* Para que el texto sea visible */
+    font-family: Arial, sans-serif; /* Establecer la fuente */
+}
+

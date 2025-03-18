@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>BIENVENIDO A TIENDA ONLINE</h1>
+    <h2>Productos</h2>
+
+    <button onclick="cargarProductos('consolas')">Consolas</button>
+    <button onclick="cargarProductos('accesorios')">Accesorios</button>
+
+    <div id="productos"></div>
+
+    <script>
+        function cargarProductos(categoria) {
+            fetch(`http://localhost:3000/productos`)
+                .then(response => response.json())
+                .then(data => {
+                    let filtrados = data.filter(item => item.categoria === categoria);
+                    let html = filtrados.map(item => `
+                        <div class="producto">
+                            <img src="${item.imagen}" alt="${item.nombre}">
+                            <h3>${item.nombre}</h3>
+                            <p>Precio: $${item.precio}</p>
+                        </div>
+                    `).join("");
+                    document.getElementById("productos").innerHTML = html;
+                })
+                .catch(error => console.log(error));
+        }
+    </script>
+</body>
+</html>
